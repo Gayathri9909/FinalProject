@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="~/Content/login.css">
+   
+</head>
+<body class="bg-image">
+    @{
+        ViewBag.Title = "Login";
+    }
+    <h1 style="font-family: sans-serif;margin-left: 650px;margin-top: 40px;color: white;">LOGIN PAGE</h1>
+    <br></br>
+
+    <div class="container">
+        <div class="box">
+            <form>
+                <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600" style="float: left;width: 200px;height: 200px;">
+                <label for="email" class="name">
+                    Enter email address:
+                    <span class="required">*</span>
+                </label>
+                <input type="text" size="35" class="inp1" id="email" placeholder="Enter a valid email address" />
+                <br><br>
+
+                <label for="password" class="name">Enter Password:<span class="required">*</span></label>
+                <input type="password" size="35" class="inp2" id="password" placeholder="Enter password" />
+                <br><br>
+
+                    <div>
+                        <h5 style="margin-left: 290px;">New User? Create an account</h5>
+                        <p style="color:goldenrod;margin-left:360px"> @Html.ActionLink("Register here", "Signup", "Home", new { area = "" }, new { @class = "nav-link" })</p>
+                    </div>
+                    <button type="submit" class="submit">
+                        @Html.ActionLink("Login", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </button>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+

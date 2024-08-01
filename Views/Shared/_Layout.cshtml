@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/nav.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container">
+            <h3 class="main">Coco Moco</h3>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li style="margin-left:520px">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Product", "Product", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Signin", "Signup", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        
+            <footer class="footer_section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 footer-col">
+                            <div class="footer_contact">
+                                <h4 style="color:goldenrod">
+                                    Reach at..
+                                </h4>
+                                <div class="contact_link_box">
+                                    <a href="">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>
+                                            Location
+                                        </span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <span>
+                                            Call: +91 9999999999
+                                        </span>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span>
+                                            Email:cocomoco@gmail.com
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 footer-col">
+                            <div class="footer_detail">
+                                <a href="" class="footer-logo" style="text-align:center">
+                                    CocoMoco
+                                </a>
+                                <p style="font-family:'Times New Roman', Times, serif;font-weight:900;color:blanchedalmond;margin-left:40px;">
+                                    Life is short, eat the cake and wear the sprinkles.
+                                </p>
+                                <div class="footer_social">
+                                    <a href="">
+                                        <img src="~/Content/Styles/fb.png" style="width:20px;height:17px" />
+                                    </a>
+                                    <a href="">
+                                        <img src="~/Content/Styles/twi.png" style="width:20px;height:17px" />
+                                    </a>
+                                    <a href="">
+                                        <img src="~/Content/Styles/insta.jpg" style="width:20px;height:17px" />
+                                    </a>
+                                    <a href="">
+                                        <img src="~/Content/Styles/whtsap.png" style="width:20px;height:17px" />
+                                    </a>
+                                    <a href="">
+                                        <img src="~/Content/Styles/link.png" style="width:20px;height:17px" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 footer-col">
+                            <div class="map_container">
+                                <div class="map">
+                                    <div id="googleMap"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <p>
+                            &copy; <span id="displayYear"></span> All Rights Reserved 2024                           
+                        </p>
+                    </div>
+                </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
